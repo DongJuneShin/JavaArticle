@@ -52,8 +52,34 @@ public class Main {
 
 					System.out.printf("%d     /    %s\n", article.id, article.title);
 				}
+				
+				
 
-			} else {
+			} 
+			else if(command.startsWith("article detail"))
+			{
+				String[]commandBits=command.split(" ");
+				int id=Integer.parseInt(commandBits[2]);
+				
+				Article foundArticle=null;
+				
+				if(foundArticle==articles)
+				
+				if(foundArticle==null)
+				{
+					System.out.printf("%d번 게시물은 존재하지않습니다.",id);
+					continue;
+				}
+				
+				System.out.printf("번호 : %d\n", foundArticle.id);
+				System.out.printf("날짜 : 2021-05-02 16:22:22\n");
+				System.out.printf("제목 : %s\n", foundArticle.title);
+				System.out.printf("내용 : %s\n", foundArticle.body);
+			}
+			
+			
+				else {
+			
 				System.out.printf("%s은(는) 존재하지 않는 명령어 입니다.\n", command);
 			}
 
